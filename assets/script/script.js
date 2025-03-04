@@ -99,7 +99,7 @@ function renderData(data) {
     dataContainer.style.display = "block";
     dataContainer.innerHTML = `
         <div class="weather-condition">
-                <img src="images/${weather.main}.png" alt="">
+                <img src="./images/${weather.main}.png" alt="">
                 <p id="desc">${weather.description}</p>
                 <p id="temp">${data.main.temp}° C</p>
         </div>
