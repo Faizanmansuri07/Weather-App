@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="./assets/style/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+
+
+    <ul class="pops">
+        
+    </ul>
+
+    <!-- main-container -->
+    <div class="container">
+                <div class="headers">
+                        <p>Weather App</p>
+                        <div class="input">
+                                <input type="text" id="city" list="suggestion" placeholder="Enter city for weather">
+                                <datalist id="suggestion">
+                                    <option value="palanpur">Palanpur</option>
+                                    <option value="moscow">Moscow</option>
+                                    <option value="london">London</option>
+                                    <option value="Istanbul">Istanbul</option>
+                                </datalist>
+                                <button id="search"><i class="fa-solid fa-magnifying-glass"></i></button>
+                        </div>
+                </div>
+                <div class="content">
+                        <!-- <div class="weather-condition">
+                                <img src="./images/clear.png" alt="">
+                                <p id="desc">Clear sky</p>
+                                <p id="temp">23 C</p>
+                        </div>
+
+                        <div class="details">
+                            <div class="wind one">
+                                    <img src="images/wind.png" alt="">
+                                    <div class="detail">
+                                            <p id="name">Wind</p>
+                                            <p id="val">23</p>
+                                    </div>
+                            </div>
+
+                            <div class="humidity one">
+                                <img src="images/humidity.png" alt="">
+                                <div class="detail">
+                                        <p id="name">Humidity</p>
+                                        <p id="val">27</p>
+                                </div>
+                        </div>
+                        </div>-->
+                </div> 
+                <p style="text-align: center; margin-top: 20px;" id="author">Created by <span style="color: rgb(99, 99, 241); font-weight: 500;">Faizan.</span></p>
+
+    </div>
+
+    <script src="assets/script/script.js"></script>
+</body>
+</html>

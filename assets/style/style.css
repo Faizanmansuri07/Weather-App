@@ -1,0 +1,194 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    list-style: none;
+}
+body{ 
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(211, 211, 216);
+}
+
+.para {
+    margin-top: 10px;
+    text-align: center;
+}
+
+/* popups */
+.pops {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    z-index: 2;
+}
+
+.pops li {
+    width: 300px;
+    display: flex;
+    align-items: center;gap: 10px;
+    background-color: #fff;
+    padding: 7px 10px;
+    border-radius: 7px;
+    position: relative;
+    animation: show_popup 0.3s ease;
+}
+
+.pops li.blue::before {
+    background-color: blue;
+
+}
+
+.pops li.green::before {
+    background-color: green;
+
+}
+
+.pops li.red::before {
+    background-color: red;
+
+}
+
+.pops li::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    /* background-color: #5252f7d2; */
+    animation:  width 2.5s ease forwards;
+}
+
+
+.pops img {
+    width: 50px;
+}
+
+@keyframes width {
+    0%{
+        width: 100%;
+    }
+    100% {
+        width: 0;
+    }
+}
+@keyframes show_popup {
+    0%{
+        transform: translateX(100%);
+    }
+    100%{
+        transform: translateX(0);
+    }
+}
+
+
+
+.container {
+    width: 400px;
+    background: #fff;
+    box-shadow: 4px 0px 0px 0px 4px rgba(0,0,0,0.1);
+    border-radius: 15px;
+    padding: 20px 30px;
+    background-color: #fff;
+    position: relative;
+}
+
+.container .headers {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container .headers p{
+    font-size: 25px;
+    font-weight: 600;
+}
+
+.container .headers .input {
+    margin-top: 30px;
+    width: 100%;
+    background: #000;
+    display: flex;
+    height: 60px;
+    /* border: 2px solid #ddd; */
+    border-radius: 20px;
+    background-color: rgb(234, 234, 240);
+    padding: 0px 15px;
+}
+
+.container .headers .input input {
+    width: 95%;
+    padding: 0px 5px;
+   
+}
+
+.container .headers .input input::placeholder {
+    font-size: 14px;
+}
+
+.container .headers .input input,  .container .headers .input button {
+    height: 100%;
+    outline: none;
+    border: none;
+    background-color: transparent;
+}
+
+.container .headers .input button {
+    font-size: 18px;
+    padding: 10px;
+    /* border: 2px solid; */
+}
+
+.container .content {
+    display: none;
+}
+
+.container .content .weather-condition{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container .content .weather-condition img {
+    width: 250px;
+}
+
+.container .content .weather-condition #desc {
+    font-size: 20px;
+    font-weight: 600;
+
+}
+
+.container .content .weather-condition #temp {
+    font-size: 18px;
+    margin-top: 10px;
+}
+
+.container .content .details {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 60px;
+}
+
+.container .content .details .one {
+    display: flex;
+    gap: 10px;
+}
+
+.container .content .details .one img {
+    width: 50px;
+    /* background: #000; */
+
+}
+
+.container .content .details .one #val {
+    margin-top: 8px;
+}
